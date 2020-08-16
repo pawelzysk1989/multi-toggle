@@ -1,0 +1,9 @@
+<app-multi-toggle
+  [selected]="selectedValue"
+  (optionChanged)="optionChanged($event)"
+  ><app-multi-toggle-option [value]="1">option1</app-multi-toggle-option>
+  <app-multi-toggle-option [value]="2" [disabled]="true"
+    >option2</app-multi-toggle-option
+  >
+  <app-multi-toggle-option [value]="3">option3</app-multi-toggle-option>
+</app-multi-toggle>

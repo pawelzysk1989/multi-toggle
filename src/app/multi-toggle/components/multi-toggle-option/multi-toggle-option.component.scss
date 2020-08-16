@@ -1,0 +1,8 @@
+:host {
+  &.is_selected {
+    color: red;
+  }
+  &.disabled {
+    opacity: 0.5;
+  }
+}
