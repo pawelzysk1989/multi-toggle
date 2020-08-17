@@ -1,3 +1,5 @@
+<h1>Inheritance</h1>
+
 <app-multi-toggle
   [selected]="selectedValue"
   (optionChanged)="optionChanged($event)"
@@ -7,3 +9,10 @@
   >
   <app-multi-toggle-option [value]="3">option3</app-multi-toggle-option>
 </app-multi-toggle>
+
+<h1>Template passing</h1>
+<app-multi-toggle-template [options]="options">
+  <ng-template #option let-option let-selected="selected">
+    <span [ngClass]="{ selected: selected }">{{ option }}</span>
+  </ng-template>
+</app-multi-toggle-template>

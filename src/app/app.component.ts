@@ -11,6 +11,8 @@ export class AppComponent {
 
   selectedValue: number | undefined = 1;
 
+  options = ['option1', 'option2', 'option3'];
+
   optionChanged(value: number): void {
     this.selectedValue = value;
   }

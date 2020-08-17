@@ -1,0 +1,17 @@
+<div *ngFor="let option of options; index as i" (click)="selectOption(option)">
+  <ng-template #defaultTemplate let-option>
+    <span>
+      {{ option }}
+    </span>
+  </ng-template>
+
+  <ng-container
+    [ngTemplateOutlet]="optionTemplateRef || defaultTemplate"
+    [ngTemplateOutletContext]="{
+      $implicit: option,
+      selected: comparator(option, picked),
+      index: i
+    }"
+  >
+  </ng-container>
+</div>
